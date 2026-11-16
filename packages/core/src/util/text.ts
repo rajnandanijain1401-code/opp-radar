@@ -29,7 +29,7 @@ export function stripHtml(s: string): string {
 
 /** Replace long dashes with plain hyphens (house style: no em dashes anywhere). */
 export function noLongDashes(s: string): string {
-  return s.replace(/\s*[—]\s*/g, ", ").replace(/[–]/g, "-");
+  return s.replace(/\s*[\u2014]\s*/g, ", ").replace(/[\u2013]/g, "-");
 }
 
 export function cleanTitle(s: string): string {

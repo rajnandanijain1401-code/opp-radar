@@ -60,7 +60,7 @@ describe("rules classifier", () => {
       const c = classifyWithRules({ content_hash: String(i), title: g.title, source_id: "x" });
       expect(ClassificationSchema.safeParse(c).success, g.title).toBe(true);
       for (const s of [c.summary, c.hiring_reason, c.suggested_action, c.outreach_opener]) {
-        expect(s).not.toMatch(/—/);
+        expect(s).not.toMatch(/\u2014/);
       }
       expect(c.summary.split(/(?<=[.!?])\s+/).length).toBeLessThanOrEqual(2);
     }

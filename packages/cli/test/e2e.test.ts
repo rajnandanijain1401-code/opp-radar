@@ -76,7 +76,7 @@ describe("OSS pipeline end to end (fixtures -> fake email provider)", () => {
     expect(instant!.html).toContain("Zeta Pay");
     expect(digest!.subject).toMatch(/^Your daily radar: \d+ signals, top pick /);
     expect(digest!.text).toContain("Top pick of the day");
-    for (const m of mail.sent) expect(m.html + m.text).not.toMatch(/—/);
+    for (const m of mail.sent) expect(m.html + m.text).not.toMatch(/\u2014/);
 
     // Never full article text in emails: snippets from fixtures must not leak.
     expect(digest!.text).not.toContain("according to regulatory filings accessed by Entrackr");

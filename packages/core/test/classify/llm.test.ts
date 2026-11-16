@@ -43,7 +43,7 @@ const llmItem = (hash: string, extra: Record<string, unknown> = {}) => ({
   summary:
     "Zeta Pay closed a $20M Series B. It plans to grow its lending product. A third sentence that must be cut.",
   suggested_action: "Reach out to the engineering lead this week.",
-  outreach_opener: "Congrats on the Series B — exciting times!",
+  outreach_opener: "Congrats on the Series B \u2014 exciting times!",
   confidence: 0.9,
   ...extra,
 });
@@ -87,7 +87,7 @@ describe("LLM classifier (mocked Anthropic client)", () => {
     expect(item.classifier).toBe("llm");
     expect(item.hiring_likelihood).toBe(84);
     expect(item.summary.split(/(?<=[.!?])\s+/)).toHaveLength(2);
-    expect(item.outreach_opener).not.toContain("—");
+    expect(item.outreach_opener).not.toContain("\u2014");
   });
 
   it("retries invalid JSON once, then succeeds", async () => {
@@ -180,6 +180,6 @@ describe("LLM classifier (mocked Anthropic client)", () => {
     expect(CLASSIFY_SYSTEM_PROMPT).toMatch(/own words/);
     expect(CLASSIFY_SYSTEM_PROMPT).toMatch(/Never copy/);
     expect(CLASSIFY_SYSTEM_PROMPT).toMatch(/"other" with confidence below 0.4/);
-    expect(CLASSIFY_SYSTEM_PROMPT).not.toContain("—");
+    expect(CLASSIFY_SYSTEM_PROMPT).not.toContain("\u2014");
   });
 });

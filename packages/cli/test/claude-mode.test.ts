@@ -31,7 +31,7 @@ describe("Claude mode skill", () => {
       ".claude/commands/radar.md",
       "docs/claude-mode.md",
     ]) {
-      expect(readFileSync(resolve(ROOT, f), "utf8"), f).not.toMatch(/—/);
+      expect(readFileSync(resolve(ROOT, f), "utf8"), f).not.toMatch(/\u2014/);
     }
   });
 });

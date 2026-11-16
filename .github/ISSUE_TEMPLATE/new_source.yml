@@ -1,0 +1,27 @@
+name: New source request
+description: Suggest a feed, API or filing source
+labels: [source]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Feed or API URL
+      placeholder: https://example.com/feed
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What signals does it carry?
+      description: Funding, acquisitions, expansions, hiring announcements... and which regions.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms check
+      options:
+        - label: It is a public RSS/Atom feed or an official API (no scraping of LinkedIn, X, Instagram or Facebook, no paywall or login bypass).
+          required: true
+        - label: Its robots.txt does not disallow the URL.
+          required: true

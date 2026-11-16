@@ -9,7 +9,7 @@ const opts = {
   physicalAddress: "OppRadar, 123 Example Street, Bengaluru",
   appUrl: "https://oppradar.example",
 };
-const noDash = (s: string) => expect(s).not.toMatch(/—/);
+const noDash = (s: string) => expect(s).not.toMatch(/\u2014/);
 
 describe("instant alert email", () => {
   it("uses the single-item subject format", async () => {

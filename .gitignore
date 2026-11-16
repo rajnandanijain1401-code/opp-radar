@@ -21,3 +21,4 @@ next-env.d.ts
 apps/web/.pglite/
 apps/web/.data/
 apps/web/out/
+apps/web/.pglite-e2e/

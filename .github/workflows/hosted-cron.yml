@@ -1,0 +1,32 @@
+# Fallback scheduler for the hosted app (Vercel Hobby only allows daily crons).
+# Set repository secrets OPPRADAR_URL (e.g. https://oppradar.app) and CRON_SECRET, and the
+# repository variable HOSTED_CRON_ENABLED=true to turn it on.
+name: Hosted cron fallback
+
+on:
+  schedule:
+    - cron: "*/15 * * * *" # pipeline
+    - cron: "2 * * * *" # digest, hourly
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "pipeline or digest"
+        default: pipeline
+
+jobs:
+  ping:
+    if: vars.HOSTED_CRON_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Call the endpoint
+        env:
+          URL: ${{ secrets.OPPRADAR_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          SCHEDULE: ${{ github.event.schedule }}
+          JOB_INPUT: ${{ inputs.job }}
+        run: |
+          JOB="pipeline"
+          if [ "$SCHEDULE" = "2 * * * *" ] || [ "$JOB_INPUT" = "digest" ]; then JOB="digest"; fi
+          curl --fail-with-body -sS -X POST "$URL/api/cron/$JOB" \
+            -H "Authorization: Bearer $CRON_SECRET" --max-time 300
