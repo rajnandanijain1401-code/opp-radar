@@ -49,3 +49,6 @@ One line per decision: what was decided, and why.
 - Claude mode: `radar fetch` always writes `out/candidates.json`, and the skill reads that file rather than stdout, because `pnpm` can print banners to stdout.
 - Claude mode classifies every candidate, including irrelevant ones as `other`, so `radar send` marks all of them as seen; `fetch --since-state` never mutates state.
 - The skill's example object is validated against `SignalInputSchema` in a test, so the documented schema cannot drift from the code.
+- Hosted unsubscribe page changes nothing on GET (email scanners prefetch links); one button click unsubscribes, and RFC 8058 one-click POST goes to `/api/unsubscribe`.
+- The shared site header does not call `auth()` so public pages (landing, /signals) stay ISR-cacheable.
+- Cron endpoints accept GET (Vercel Cron) and POST (GitHub Actions fallback) with `Authorization: Bearer CRON_SECRET`; without a secret they only work outside production.

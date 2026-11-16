@@ -8,6 +8,6 @@
 - [x] M5 Emails: React Email templates, SMTP + Resend providers, preview, test-email
 - [x] M6 CLI + OSS GitHub Action mode
 - [x] M7 Claude mode: skill, slash command, docs
-- [ ] M8 Web app: DB, auth, onboarding, dashboard, public pages, cron, admin
+- [x] M8 Web app: DB, auth, onboarding, dashboard, public pages, cron, admin (verified in browser: magic link, onboarding, feed, instant alert, unsubscribe)
 - [ ] M9 Billing: Razorpay + Stripe behind `BILLING_ENABLED`
 - [x] M10 Polish + launch assets: Playwright, README, docs, screenshots, push

@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4f2ee;
+  --color-card: #ffffff;
+  --color-ink: #12151c;
+  --color-muted: #5b6472;
+  --color-faint: #8a919c;
+  --color-line: #e2ded6;
+  --color-accent: #e8551e;
+  --color-accent-soft: #fdeee6;
+  --color-good: #16794a;
+  --color-good-soft: #e5f4ec;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-mono-face), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+.radar-grid {
+  background-image:
+    linear-gradient(to right, rgb(18 21 28 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(18 21 28 / 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.radar-sweep {
+  animation: sweep 6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .radar-sweep {
+    animation: none;
+  }
+}
