@@ -1,0 +1,71 @@
+# OppRadar OSS mode: fork the repo, edit radar.config.yaml, add secrets, done.
+# Runs every 30 minutes, sends instant alerts + your digest, and commits data/state.json back.
+name: OppRadar
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      force_digest:
+        description: "Send the digest now"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oppradar-run
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    # Runs automatically on forks. On the upstream repo it only runs if RADAR_ENABLED=true.
+    if: github.repository_owner != 'rajnandanijain1401-code' || vars.RADAR_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Run radar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          RADAR_FROM_EMAIL: ${{ secrets.RADAR_FROM_EMAIL }}
+          RADAR_CONTACT_EMAIL: ${{ secrets.RADAR_CONTACT_EMAIL }}
+          RADAR_MODEL: ${{ vars.RADAR_MODEL }}
+          LLM_DAILY_TOKEN_BUDGET: ${{ vars.LLM_DAILY_TOKEN_BUDGET }}
+          LOG_LEVEL: info
+        run: pnpm radar run ${{ inputs.force_digest && '--force-digest' || '' }}
+
+      - name: Commit state
+        run: |
+          if [ -n "$(git status --porcelain data/state.json)" ]; then
+            git config user.name "oppradar-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/state.json
+            git commit -m "chore(state): update radar state [skip ci]"
+            git pull --rebase --autostash
+            git push
+          else
+            echo "state unchanged"
+          fi
+
+      - name: Upload run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-run-${{ github.run_id }}
+          path: out/run-report.json
+          if-no-files-found: ignore
+          retention-days: 7

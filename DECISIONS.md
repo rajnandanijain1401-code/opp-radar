@@ -10,7 +10,7 @@ One line per decision: what was decided, and why.
 - Feed verification (2026-11-16): Inc42, Entrackr (`/rss`, not `/feed/`), YourStory, ET Tech, ET Startups, TechCrunch Venture/Startups, Crunchbase News and SEC EDGAR verified OK.
 - VCCircle disabled: `/feed` and other guesses returned 404 and no public RSS was found.
 - Business Standard disabled: their RSS returned HTTP 403 (Access Denied) to automated clients.
-- Moneycontrol: no dedicated startups feed could be verified, so the business feed is used and the pre-filter discards non-startup news.
+- Moneycontrol disabled: its RSS feeds (business, latestnews, top news) respond with HTTP 200 but contain only items from 2024 or older; the adapter entry stays in `sources.yaml` for when they are refreshed.
 - Reddit disabled by default: unauthenticated `.json` listings returned HTTP 403; the adapter raises `SourceBlockedError` and the run continues without it.
 - Google News RSS disabled by default: news.google.com/robots.txt disallows `/rss/search` for generic agents and the operating rules require respecting robots.txt; adapter, templates and watchlist queries are fully implemented and tested against fixtures.
 - SEC EDGAR needs a User-Agent with a real contact email (a generic UA got 403), so the adapter sends `OppRadar <RADAR_CONTACT_EMAIL>` and skips itself when the email is unset.
@@ -41,3 +41,8 @@ One line per decision: what was decided, and why.
 - Fixture mode (`RADAR_FIXTURES=1` or `--fixtures`) always sends the digest too (demo), and keeps its state in `out/state.fixtures.json` so demos never touch the committed `data/state.json`.
 - When a digest is due but nothing matched, no "quiet day" email is sent (less inbox noise); the template still supports it.
 - A root `tsconfig.json` includes the packages so `tsx` applies the automatic JSX runtime when the CLI imports the React Email templates.
+- Live verification with `pnpm radar sources check --all` (2026-11-16): 10 enabled sources returned items; Google News and Reddit were stopped by the robots.txt check, as intended.
+- The `radar.yml` workflow runs automatically on forks but is opt-in on the upstream repo (`vars.RADAR_ENABLED == 'true'`), so the public repo does not commit state every 30 minutes.
+- The workflow does not set `RADAR_EMAIL_PROVIDER`: the provider is auto-detected (SMTP when `SMTP_HOST` + `SMTP_USER` are present, else console), so a fork without secrets runs harmlessly and logs emails instead of failing.
+- State is pruned on every run (seen hashes, clusters and sent markers after 14 days, enrichment cache after 24h, unsent digest items after 8 days), keeping `data/state.json` small enough to commit.
+- Runs fetch from `last_run_at - 2h` to catch late-published items; state dedupe makes the overlap free.

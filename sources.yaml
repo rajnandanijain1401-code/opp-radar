@@ -48,7 +48,8 @@ sources:
     url: https://www.moneycontrol.com/rss/business.xml
     quality: 65
     region: IN
-    note: No dedicated startups feed could be verified, so we use the business feed and let the pre-filter do the work.
+    enabled: false
+    note: Disabled. Moneycontrol RSS feeds respond but are stale (latest items from April 2024 at verification time).
   - id: vccircle
     kind: rss
     name: VCCircle

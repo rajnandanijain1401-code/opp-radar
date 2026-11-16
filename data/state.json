@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "last_run_at": null,
+  "seen": {},
+  "seen_titles": {},
+  "clusters": [],
+  "sent_clusters": {},
+  "instant": {
+    "date": null,
+    "count": 0,
+    "last_sent_at": null
+  },
+  "instant_queue": [],
+  "digest_queue": [],
+  "last_digest_sent_at": null,
+  "llm_usage": {
+    "date": null,
+    "tokens": 0
+  },
+  "enrich_cache": {},
+  "source_health": {}
+}
