@@ -7,7 +7,7 @@
 - [x] M4 Enrich + score + route
 - [x] M5 Emails: React Email templates, SMTP + Resend providers, preview, test-email
 - [x] M6 CLI + OSS GitHub Action mode
-- [ ] M7 Claude mode: skill, slash command, docs
+- [x] M7 Claude mode: skill, slash command, docs
 - [ ] M8 Web app: DB, auth, onboarding, dashboard, public pages, cron, admin
 - [ ] M9 Billing: Razorpay + Stripe behind `BILLING_ENABLED`
 - [x] M10 Polish + launch assets: Playwright, README, docs, screenshots, push

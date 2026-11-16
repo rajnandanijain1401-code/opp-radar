@@ -46,3 +46,6 @@ One line per decision: what was decided, and why.
 - The workflow does not set `RADAR_EMAIL_PROVIDER`: the provider is auto-detected (SMTP when `SMTP_HOST` + `SMTP_USER` are present, else console), so a fork without secrets runs harmlessly and logs emails instead of failing.
 - State is pruned on every run (seen hashes, clusters and sent markers after 14 days, enrichment cache after 24h, unsent digest items after 8 days), keeping `data/state.json` small enough to commit.
 - Runs fetch from `last_run_at - 2h` to catch late-published items; state dedupe makes the overlap free.
+- Claude mode: `radar fetch` always writes `out/candidates.json`, and the skill reads that file rather than stdout, because `pnpm` can print banners to stdout.
+- Claude mode classifies every candidate, including irrelevant ones as `other`, so `radar send` marks all of them as seen; `fetch --since-state` never mutates state.
+- The skill's example object is validated against `SignalInputSchema` in a test, so the documented schema cannot drift from the code.
