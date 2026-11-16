@@ -61,7 +61,7 @@ export function parseRound(text: string): string | null {
 
 export function parseInvestors(text: string): string[] {
   const out: string[] = [];
-  const led = text.match(/\bled by ([A-Z][\w&.'-]*(?:\s+[A-Z][\w&.'-]*)*)/);
+  const led = text.match(/\b[Ll]ed [Bb]y ([A-Z][\w&.'-]*(?:\s+[A-Z][\w&.'-]*)*)/);
   if (led) out.push(led[1]!.trim());
   const from = text.match(
     /\bfrom ((?:[A-Z][\w&.'-]*(?:\s+[A-Z][\w&.'-]*)*)(?:,\s*[A-Z][\w&.'-]*(?:\s+[A-Z][\w&.'-]*)*)*)/,

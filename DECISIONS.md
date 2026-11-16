@@ -52,3 +52,7 @@ One line per decision: what was decided, and why.
 - Hosted unsubscribe page changes nothing on GET (email scanners prefetch links); one button click unsubscribes, and RFC 8058 one-click POST goes to `/api/unsubscribe`.
 - The shared site header does not call `auth()` so public pages (landing, /signals) stay ISR-cacheable.
 - Cron endpoints accept GET (Vercel Cron) and POST (GitHub Actions fallback) with `Authorization: Bearer CRON_SECRET`; without a secret they only work outside production.
+- Payment providers call the Razorpay and Stripe REST APIs with `fetch` behind a `PaymentProvider` interface instead of pulling in both SDKs; signature checks are hand-written HMACs (Razorpay hex HMAC of the body, Stripe `t=,v1=` with a 5-minute tolerance) and covered by tests.
+- Webhooks are accepted even after `BILLING_ENABLED` is switched off, so cancellations and renewals keep syncing; checkout is only offered while it is on.
+- Razorpay statuses `active`, `authenticated` and `past_due`-equivalents (and Stripe `active`, `trialing`, `past_due`) count as Pro, so a short payment retry window does not drop features.
+- `next build` gives each worker an in-memory PGlite (pages skip DB queries at build time) to avoid concurrent access to the dev data directory.

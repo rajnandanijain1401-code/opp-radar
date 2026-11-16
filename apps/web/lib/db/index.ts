@@ -21,8 +21,12 @@ function create(): Db {
     const client = postgres(url, { max: Number(process.env.DB_POOL_MAX ?? 5), prepare: false });
     return drizzlePg(client, { schema });
   }
-  const dir = process.env.PGLITE_DIR ?? join(process.cwd(), ".pglite");
-  const client = new PGlite(dir);
+  // During `next build` several workers import this module at once; give each an in-memory
+  // instance (pages skip queries at build time) instead of fighting over the data dir.
+  const client =
+    process.env.NEXT_PHASE === "phase-production-build"
+      ? new PGlite()
+      : new PGlite(process.env.PGLITE_DIR ?? join(process.cwd(), ".pglite"));
   return drizzlePglite(client, { schema }) as unknown as Db;
 }
 
