@@ -1,0 +1,20 @@
+node_modules/
+.turbo/
+dist/
+.next/
+out/
+coverage/
+*.log
+.DS_Store
+.pglite/
+.data/
+playwright-report/
+test-results/
+*.tsbuildinfo
+next-env.d.ts
+
+# env: never commit real secrets
+.env
+.env.*
+!.env.example
+!**/.env.example

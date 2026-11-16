@@ -1,0 +1,21 @@
+# Local Postgres for hosted-mode development.
+# Optional: if DATABASE_URL is unset, the web app falls back to embedded PGlite.
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: radar
+      POSTGRES_PASSWORD: radar
+      POSTGRES_DB: oppradar
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U radar -d oppradar"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  pgdata:

@@ -1,0 +1,35 @@
+{
+  "name": "opp-radar",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Open-source opportunity radar: funding, acquisitions and hiring signals, scored and emailed to you.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --filter=@opp-radar/web",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "radar": "tsx packages/cli/src/index.ts",
+    "eval": "pnpm --filter @opp-radar/core run eval"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.39.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.6.0",
+    "tsx": "^4.20.0",
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^3.2.4"
+  }
+}

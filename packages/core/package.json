@@ -1,0 +1,19 @@
+{
+  "name": "@opp-radar/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "eval": "tsx scripts/eval.ts"
+  },
+  "dependencies": {
+    "zod": "^4.1.0"
+  }
+}
