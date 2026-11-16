@@ -22,3 +22,9 @@ One line per decision: what was decided, and why.
 - Near-duplicate detection uses Jaccard on normalized title unigrams + bigrams (threshold 0.8), with money/verb normalization (`Mn`/`million` to `m`, `bags`/`secures` to `raise`). Simpler and more explainable than simhash for headline-length text.
 - Dedupe keeps the earliest report and lists the others in `other_sources`; clustering (same normalized company + event type within 72h) runs after classification, persists clusters in state/DB so a story arriving a day later joins its original cluster.
 - New-style opaque Google News IDs cannot be decoded offline; we keep the Google URL and rely on title dedupe rather than calling Google per item.
+- LLM calls use `client.messages.parse` with `output_config.format = zodOutputFormat(...)` (structured outputs) and `effort: "low"` for cheap, fast classification; a lenient wire schema goes to the API and every item is re-validated against the strict Zod `ClassificationSchema`.
+- Invalid or missing LLM items are retried once per batch, then filled by the rules classifier, so a run never fails because of the LLM.
+- Rules-mode fallback results are not cached when LLM mode was intended, so a later run with budget can upgrade them; true rules-mode results are cached.
+- The token budget is checked before each batch with a conservative estimate (about 4 chars per token plus ~260 output tokens per item), so we never start a call we cannot afford.
+- Currency conversion in the rules engine uses fixed rates (1 USD = 84 INR, EUR 1.08, GBP 1.27); good enough for thresholds, documented in the LLM prompt too.
+- Golden set: 30 hand-labeled fictional headlines across all 11 event types; rules mode scores 93% event-type accuracy (2 honest misses kept to avoid overfitting).

@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Fintech startup Zeta Pay raises $20 Mn in Series B led by Northstar Ventures",
+    "event_type": "funding",
+    "company_name": "Zeta Pay"
+  },
+  {
+    "title": "Kosha AI bags $3.5M seed round to automate bookkeeping for mid-sized firms",
+    "event_type": "funding",
+    "company_name": "Kosha AI"
+  },
+  {
+    "title": "Exclusive: Farmlane in talks to raise $8 Mn in pre-Series A round",
+    "event_type": "funding",
+    "company_name": "Farmlane"
+  },
+  {
+    "title": "Vaultline secures $30 million Series B for identity security",
+    "event_type": "funding",
+    "company_name": "Vaultline"
+  },
+  {
+    "title": "Gurugram-based Plotline nets Rs 40 crore in funding from Sahyadri Capital",
+    "event_type": "funding",
+    "company_name": "Plotline"
+  },
+  {
+    "title": "Orbit Health acquires AI diagnostics startup Lumen Labs",
+    "event_type": "acquisition",
+    "company_name": "Orbit Health"
+  },
+  {
+    "title": "Payments major Kestrel to acquire lending platform Credora for $90 million",
+    "event_type": "acquisition",
+    "company_name": "Kestrel"
+  },
+  {
+    "title": "Brightloop buys analytics startup Nimbus in all-stock deal",
+    "event_type": "acquisition",
+    "company_name": "Brightloop"
+  },
+  {
+    "title": "ShelfWise opens new office in Hyderabad, plans to hire 150",
+    "event_type": "expansion",
+    "company_name": "ShelfWise"
+  },
+  {
+    "title": "Ridewise to expand to five new cities by March",
+    "event_type": "expansion",
+    "company_name": "Ridewise"
+  },
+  {
+    "title": "Lumio sets up R&D centre in Pune to support global customers",
+    "event_type": "expansion",
+    "company_name": "Lumio"
+  },
+  {
+    "title": "Quickbasket appoints former FoodDash executive Meera Rao as CTO",
+    "event_type": "leadership_hire",
+    "company_name": "Quickbasket"
+  },
+  {
+    "title": "Northwind Data names ex-PayGrid exec as chief revenue officer",
+    "event_type": "leadership_hire",
+    "company_name": "Northwind Data"
+  },
+  {
+    "title": "Healthtech unicorn Medora ropes in Arjun Mehta as CFO ahead of IPO",
+    "event_type": "leadership_hire",
+    "company_name": "Medora"
+  },
+  {
+    "title": "Paylane launches UPI credit line for small businesses",
+    "event_type": "product_launch",
+    "company_name": "Paylane"
+  },
+  {
+    "title": "Tessellate opens its AI design tool to everyone",
+    "event_type": "product_launch",
+    "company_name": "Tessellate"
+  },
+  {
+    "title": "Launch HN: Driftwood (YC F26) - Observability for AI agents",
+    "event_type": "product_launch",
+    "company_name": "Driftwood"
+  },
+  {
+    "title": "Paylane bags multi-year contract with Bharat Mutual Bank",
+    "event_type": "partnership_contract",
+    "company_name": "Paylane"
+  },
+  {
+    "title": "Fleetcore partners with Tata Motors to power EV fleet analytics",
+    "event_type": "partnership_contract",
+    "company_name": "Fleetcore"
+  },
+  {
+    "title": "Indus Cloud files DRHP with Sebi for Rs 1,200 crore IPO",
+    "event_type": "ipo_filing",
+    "company_name": "Indus Cloud"
+  },
+  {
+    "title": "Cobalt Systems files S-1 for IPO on Nasdaq",
+    "event_type": "ipo_filing",
+    "company_name": "Cobalt Systems"
+  },
+  {
+    "title": "Agrova is hiring 200 engineers across Bengaluru and Pune",
+    "event_type": "hiring_announcement",
+    "company_name": "Agrova"
+  },
+  {
+    "title": "Stackmint plans to hire 300 people this year as demand grows",
+    "event_type": "hiring_announcement",
+    "company_name": "Stackmint"
+  },
+  {
+    "title": "Edtech startup Learnly lays off 120 employees amid restructuring",
+    "event_type": "layoffs",
+    "company_name": "Learnly"
+  },
+  {
+    "title": "Cartwheel cuts 15% of workforce in second round of job cuts",
+    "event_type": "layoffs",
+    "company_name": "Cartwheel"
+  },
+  {
+    "title": "Northstar Surge selects 12 startups for its latest accelerator cohort",
+    "event_type": "accelerator_batch",
+    "company_name": "Northstar Surge"
+  },
+  {
+    "title": "Meet the 15 startups in the new Kernel Labs cohort",
+    "event_type": "accelerator_batch",
+    "company_name": "Kernel Labs"
+  },
+  {
+    "title": "Weekly funding report: Indian startups raised $210 Mn this week",
+    "event_type": "other",
+    "company_name": "Unknown"
+  },
+  {
+    "title": "Nvidia spy case raises wider questions about chip smuggling",
+    "event_type": "other",
+    "company_name": "Nvidia"
+  },
+  {
+    "title": "Sensex ends 300 points higher as IT stocks gain",
+    "event_type": "other",
+    "company_name": "Unknown"
+  }
+]
