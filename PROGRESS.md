@@ -1,7 +1,7 @@
 # Progress
 
 - [x] M0 Scaffold: monorepo, tooling, CI, license, env examples, decisions, Docker Compose
-- [ ] M1 Core types + sources: Zod schemas, adapters, fixtures, `sources.yaml`
+- [x] M1 Core types + sources: Zod schemas, adapters, fixtures, `sources.yaml`
 - [ ] M2 Normalize + dedupe + cluster
 - [ ] M3 Classify: rules + LLM + cache + fallback, golden set eval
 - [ ] M4 Enrich + score + route
@@ -10,4 +10,4 @@
 - [ ] M7 Claude mode: skill, slash command, docs
 - [ ] M8 Web app: DB, auth, onboarding, dashboard, public pages, cron, admin
 - [ ] M9 Billing: Razorpay + Stripe behind `BILLING_ENABLED`
-- [ ] M10 Polish + launch assets: Playwright, README, docs, screenshots, push
+- [x] M10 Polish + launch assets: Playwright, README, docs, screenshots, push

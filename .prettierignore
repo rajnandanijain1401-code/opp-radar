@@ -6,5 +6,5 @@ out
 coverage
 drizzle
 data/state.json
-packages/core/test/fixtures
+packages/core/fixtures
 packages/emails/test/__snapshots__

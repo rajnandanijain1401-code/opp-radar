@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>TechCrunch Venture</title>
+    <link>https://techcrunch.com/category/venture/</link>
+    <description>TechCrunch Venture feed</description>
+    <item>
+      <title><![CDATA[Fieldstack raises $45M Series C to bring AI copilots to construction sites]]></title>
+      <link>https://techcrunch.com/2026/11/15/fieldstack-raises-45m-series-c/</link>
+      <guid isPermaLink="false">https://techcrunch.com/2026/11/15/fieldstack-raises-45m-series-c/</guid>
+      <pubDate>{{rfc822:-9h}}</pubDate>
+      <description><![CDATA[<p>Fieldstack, which builds AI copilots for construction project managers, has raised a $45 million Series C.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Helix Bio lands $12M seed to speed up protein design]]></title>
+      <link>https://techcrunch.com/2026/11/15/helix-bio-12m-seed/</link>
+      <guid isPermaLink="false">https://techcrunch.com/2026/11/15/helix-bio-12m-seed/</guid>
+      <pubDate>{{rfc822:-15h}}</pubDate>
+      <description><![CDATA[<p>Boston-based Helix Bio has raised $12 million in seed funding.</p>]]></description>
+    </item>
+  </channel>
+</rss>

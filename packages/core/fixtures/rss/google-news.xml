@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Google News</title>
+    <link>https://news.google.com</link>
+    <description>Google News feed</description>
+    <item>
+      <title><![CDATA[Zeta Pay raises $20 million in Series B round to expand lending stack - The Economic Times]]></title>
+      <link>https://news.google.com/rss/articles/CBMibWh0dHBzOi8vZWNvbm9taWN0aW1lcy5pbmRpYXRpbWVzLmNvbS90ZWNoL2Z1bmRpbmcvemV0YS1wYXktcmFpc2VzLTIwLW1pbGxpb24tc2VyaWVzLWIvYXJ0aWNsZXNob3cvMTEwMDAwMS5jbXPSAQA?oc=5</link>
+      <guid isPermaLink="false">https://news.google.com/rss/articles/CBMibWh0dHBzOi8vZWNvbm9taWN0aW1lcy5pbmRpYXRpbWVzLmNvbS90ZWNoL2Z1bmRpbmcvemV0YS1wYXktcmFpc2VzLTIwLW1pbGxpb24tc2VyaWVzLWIvYXJ0aWNsZXNob3cvMTEwMDAwMS5jbXPSAQA?oc=5</guid>
+      <pubDate>{{rfc822:-1h}}</pubDate>
+      <description><![CDATA[<p>Zeta Pay raises $20 million</p>]]></description>
+      <source url="https://economictimes.indiatimes.com">The Economic Times</source>
+    </item>
+    <item>
+      <title><![CDATA[Kosha AI secures $3.5 million in seed funding - BusinessLine]]></title>
+      <link>https://news.google.com/rss/articles/CBMiX2h0dHBzOi8vd3d3LnRoZWhpbmR1YnVzaW5lc3NsaW5lLmNvbS9jb21wYW5pZXMva29zaGEtYWktc2VjdXJlcy0zNS1taWxsaW9uLXNlZWQvYXJ0aWNsZTEwMDEuZWNl0gEA?oc=5</link>
+      <guid isPermaLink="false">https://news.google.com/rss/articles/CBMiX2h0dHBzOi8vd3d3LnRoZWhpbmR1YnVzaW5lc3NsaW5lLmNvbS9jb21wYW5pZXMva29zaGEtYWktc2VjdXJlcy0zNS1taWxsaW9uLXNlZWQvYXJ0aWNsZTEwMDEuZWNl0gEA?oc=5</guid>
+      <pubDate>{{rfc822:-3h}}</pubDate>
+      <description><![CDATA[<p>Kosha AI secures seed funding</p>]]></description>
+      <source url="https://www.thehindubusinessline.com">BusinessLine</source>
+    </item>
+    <item>
+      <title><![CDATA[Lumio opens Austin office, plans to hire 80 engineers - Austin Business Journal]]></title>
+      <link>https://news.google.com/rss/articles/CBMiAU_yqLOpaqueNewStyleIdThatCannotBeDecodedOffline?oc=5</link>
+      <guid isPermaLink="false">https://news.google.com/rss/articles/CBMiAU_yqLOpaqueNewStyleIdThatCannotBeDecodedOffline?oc=5</guid>
+      <pubDate>{{rfc822:-6h}}</pubDate>
+      <description><![CDATA[<p>Lumio expands</p>]]></description>
+      <source url="https://www.bizjournals.com">Austin Business Journal</source>
+    </item>
+  </channel>
+</rss>

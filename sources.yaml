@@ -1,0 +1,156 @@
+# OppRadar sources.
+# Each entry maps to an adapter in packages/core/src/sources. Feeds were verified on 2026-11-16;
+# anything that failed verification ships with enabled: false and a note (see DECISIONS.md).
+# OppRadar stores only title + link + its own short summary. Never full article text.
+
+defaults:
+  rate_limit_ms: 1500 # minimum gap between two requests to the same host
+  timeout_ms: 15000
+  host_rate_limits:
+    www.reddit.com: 10000
+    www.sec.gov: 1000
+
+sources:
+  # ---------- India startup news ----------
+  - id: inc42
+    kind: rss
+    name: Inc42
+    url: https://inc42.com/feed/
+    quality: 80
+    region: IN
+  - id: entrackr
+    kind: rss
+    name: Entrackr
+    url: https://entrackr.com/rss
+    quality: 80
+    region: IN
+  - id: yourstory
+    kind: rss
+    name: YourStory
+    url: https://yourstory.com/feed
+    quality: 75
+    region: IN
+  - id: et-tech
+    kind: rss
+    name: Economic Times Tech
+    url: https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms
+    quality: 75
+    region: IN
+  - id: et-startups
+    kind: rss
+    name: Economic Times Startups
+    url: https://economictimes.indiatimes.com/tech/startups/rssfeeds/78570550.cms
+    quality: 80
+    region: IN
+  - id: moneycontrol
+    kind: rss
+    name: Moneycontrol Business
+    url: https://www.moneycontrol.com/rss/business.xml
+    quality: 65
+    region: IN
+    note: No dedicated startups feed could be verified, so we use the business feed and let the pre-filter do the work.
+  - id: vccircle
+    kind: rss
+    name: VCCircle
+    url: https://www.vccircle.com/feed
+    quality: 75
+    region: IN
+    enabled: false
+    note: Disabled. Returned HTTP 404 at verification time (2026-11-16), no public RSS found.
+  - id: business-standard
+    kind: rss
+    name: Business Standard Companies
+    url: https://www.business-standard.com/rss/companies-101.rss
+    quality: 70
+    region: IN
+    enabled: false
+    note: Disabled. Returned HTTP 403 (Access Denied) to automated clients at verification time.
+
+  # ---------- Global startup news ----------
+  - id: techcrunch-venture
+    kind: rss
+    name: TechCrunch Venture
+    url: https://techcrunch.com/category/venture/feed/
+    quality: 85
+    region: US
+  - id: techcrunch-startups
+    kind: rss
+    name: TechCrunch Startups
+    url: https://techcrunch.com/category/startups/feed/
+    quality: 80
+    region: US
+  - id: crunchbase-news
+    kind: rss
+    name: Crunchbase News
+    url: https://news.crunchbase.com/feed/
+    quality: 85
+    region: US
+
+  # ---------- Aggregators and communities ----------
+  - id: google-news
+    kind: google_news
+    name: Google News
+    quality: 60
+    enabled: false
+    note: >-
+      Disabled by default. news.google.com/robots.txt disallows /rss/search for generic user agents and
+      OppRadar respects robots.txt. The adapter, query templates and watchlist queries are fully implemented;
+      if Google relaxes the rule, set enabled: true and the robots check will let it through.
+    editions: [IN, US]
+    window: 2d
+    queries:
+      - '"raises" "Series A"'
+      - '"raises" "Series B"'
+      - '"raises" seed round startup'
+      - '"acquires" startup'
+      - '"opens office" India'
+      - '"appoints" CTO'
+      - '"to hire" engineers startup'
+  - id: hn
+    kind: hn_search
+    name: Hacker News
+    quality: 65
+    queries: ["Launch HN", "raises", "YC"]
+  - id: hn-hiring
+    kind: hn_who_is_hiring
+    name: HN Who is hiring
+    quality: 70
+  - id: reddit
+    kind: reddit
+    name: Reddit
+    quality: 40
+    enabled: false
+    note: Disabled. Reddit returned HTTP 403 to unauthenticated .json requests at verification time; the adapter disables itself gracefully if blocked.
+    subreddits: [startups, IndianStartups, SaaS]
+
+  # ---------- Filings ----------
+  - id: sec-form-d
+    kind: sec_form_d
+    name: SEC EDGAR Form D
+    quality: 70
+    region: US
+    count: 100
+
+  # ---------- Optional plugins: bring your own key ----------
+  # You are responsible for complying with each platform's terms. Disabled by default.
+  - id: producthunt
+    kind: producthunt
+    name: Product Hunt
+    quality: 55
+    enabled: false
+    token_env: PRODUCT_HUNT_TOKEN
+  - id: x
+    kind: x_api
+    name: X (official API)
+    quality: 45
+    enabled: false
+    token_env: X_BEARER_TOKEN
+    queries: ['"we are hiring" startup', '"raised" "Series A"']
+  - id: apify
+    kind: apify
+    name: Apify actor
+    quality: 50
+    enabled: false
+    token_env: APIFY_TOKEN
+    actor: your-username~your-actor
+    input: {}

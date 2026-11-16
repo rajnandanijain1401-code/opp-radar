@@ -1,0 +1,9 @@
+{
+  "kind": "Listing",
+  "data": {
+    "children": [
+      { "kind": "t3", "data": { "id": "1abc01", "title": "We just closed a $1.2M pre-seed for our B2B invoicing startup, AMA", "permalink": "/r/startups/comments/1abc01/we_just_closed_a_12m_preseed/", "selftext": "Happy to answer questions about the raise.", "created_utc": {{unix:-6h}}, "stickied": false } },
+      { "kind": "t3", "data": { "id": "1abc02", "title": "Weekly feedback thread", "permalink": "/r/startups/comments/1abc02/weekly_feedback_thread/", "selftext": "", "created_utc": {{unix:-2h}}, "stickied": true } }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>TechCrunch Startups</title>
+    <link>https://techcrunch.com/category/startups/</link>
+    <description>TechCrunch Startups feed</description>
+    <item>
+      <title><![CDATA[Tessellate opens its AI design tool to everyone]]></title>
+      <link>https://techcrunch.com/2026/11/15/tessellate-ai-design-tool-launch/</link>
+      <guid isPermaLink="false">https://techcrunch.com/2026/11/15/tessellate-ai-design-tool-launch/</guid>
+      <pubDate>{{rfc822:-7h}}</pubDate>
+      <description><![CDATA[<p>Tessellate is launching its AI design tool publicly after a year in beta.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Northwind Data names former PayGrid exec as chief revenue officer]]></title>
+      <link>https://techcrunch.com/2026/11/15/northwind-data-new-cro/</link>
+      <guid isPermaLink="false">https://techcrunch.com/2026/11/15/northwind-data-new-cro/</guid>
+      <pubDate>{{rfc822:-16h}}</pubDate>
+      <description><![CDATA[<p>Northwind Data has hired a new CRO as it builds out its enterprise sales team.</p>]]></description>
+    </item>
+  </channel>
+</rss>

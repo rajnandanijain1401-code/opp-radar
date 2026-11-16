@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>ET Tech</title>
+    <link>https://economictimes.indiatimes.com/tech</link>
+    <description>ET Tech feed</description>
+    <item>
+      <title><![CDATA[Indus Cloud files DRHP with Sebi for Rs 1,200 crore IPO]]></title>
+      <link>https://economictimes.indiatimes.com/tech/technology/indus-cloud-files-drhp-ipo/articleshow/1100002.cms?from=mdr&amp;utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst</link>
+      <guid isPermaLink="false">https://economictimes.indiatimes.com/tech/technology/indus-cloud-files-drhp-ipo/articleshow/1100002.cms?from=mdr&amp;utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst</guid>
+      <pubDate>{{rfc822:-6h}}</pubDate>
+      <description><![CDATA[<p>Cloud services firm Indus Cloud has filed its draft red herring prospectus for an IPO.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Sensex ends 300 points higher as IT stocks gain]]></title>
+      <link>https://economictimes.indiatimes.com/markets/stocks/news/sensex-ends-higher/articleshow/1100003.cms</link>
+      <guid isPermaLink="false">https://economictimes.indiatimes.com/markets/stocks/news/sensex-ends-higher/articleshow/1100003.cms</guid>
+      <pubDate>{{rfc822:-3h}}</pubDate>
+      <description><![CDATA[<p>Benchmark indices closed higher.</p>]]></description>
+    </item>
+  </channel>
+</rss>

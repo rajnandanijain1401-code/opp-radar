@@ -1,0 +1,18 @@
+{
+  "data": {
+    "posts": {
+      "edges": [
+        {
+          "node": {
+            "id": "900001",
+            "name": "Tessellate",
+            "tagline": "AI design tool for product teams",
+            "url": "https://www.producthunt.com/posts/tessellate",
+            "website": "https://tessellate.example",
+            "createdAt": "{{iso:-6h}}"
+          }
+        }
+      ]
+    }
+  }
+}

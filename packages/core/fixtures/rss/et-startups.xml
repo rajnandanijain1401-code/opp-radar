@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>ET Startups</title>
+    <link>https://economictimes.indiatimes.com/tech/startups</link>
+    <description>ET Startups feed</description>
+    <item>
+      <title><![CDATA[Zeta Pay raises $20 million in Series B round to expand lending stack]]></title>
+      <link>https://economictimes.indiatimes.com/tech/funding/zeta-pay-raises-20-million-series-b/articleshow/1100001.cms?utm_source=rss&amp;utm_medium=feed&amp;from=mdr</link>
+      <guid isPermaLink="false">https://economictimes.indiatimes.com/tech/funding/zeta-pay-raises-20-million-series-b/articleshow/1100001.cms?utm_source=rss&amp;utm_medium=feed&amp;from=mdr</guid>
+      <pubDate>{{rfc822:-1h}}</pubDate>
+      <description><![CDATA[<p>Zeta Pay will use the capital to expand its lending stack and hire engineers.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Ridewise to expand to five new cities, hire 300 across ops and engineering]]></title>
+      <link>https://economictimes.indiatimes.com/tech/startups/ridewise-expand-five-cities/articleshow/1100004.cms</link>
+      <guid isPermaLink="false">https://economictimes.indiatimes.com/tech/startups/ridewise-expand-five-cities/articleshow/1100004.cms</guid>
+      <pubDate>{{rfc822:-11h}}</pubDate>
+      <description><![CDATA[<p>Mobility startup Ridewise plans to enter five new cities by March.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Paylane bags multi-year contract with Bharat Mutual Bank]]></title>
+      <link>https://economictimes.indiatimes.com/tech/startups/paylane-contract-bharat-mutual/articleshow/1100005.cms</link>
+      <guid isPermaLink="false">https://economictimes.indiatimes.com/tech/startups/paylane-contract-bharat-mutual/articleshow/1100005.cms</guid>
+      <pubDate>{{rfc822:-13h}}</pubDate>
+      <description><![CDATA[<p>Paylane will power digital lending journeys for the bank under the contract.</p>]]></description>
+    </item>
+  </channel>
+</rss>

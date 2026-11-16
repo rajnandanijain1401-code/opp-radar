@@ -7,3 +7,14 @@ One line per decision: what was decided, and why.
 - Default LLM model is `claude-haiku-5-5` (smallest current Claude Haiku per Anthropic docs, checked 2026-11-16); override with `RADAR_MODEL`.
 - Docker is optional for local dev: if `DATABASE_URL` is unset, the web app uses embedded PGlite (Postgres in WASM) stored in `apps/web/.pglite`, so `pnpm dev` works with zero services.
 - pnpm 9 is pinned via `packageManager` so CI and contributors resolve the same lockfile format.
+- Feed verification (2026-11-16): Inc42, Entrackr (`/rss`, not `/feed/`), YourStory, ET Tech, ET Startups, TechCrunch Venture/Startups, Crunchbase News and SEC EDGAR verified OK.
+- VCCircle disabled: `/feed` and other guesses returned 404 and no public RSS was found.
+- Business Standard disabled: their RSS returned HTTP 403 (Access Denied) to automated clients.
+- Moneycontrol: no dedicated startups feed could be verified, so the business feed is used and the pre-filter discards non-startup news.
+- Reddit disabled by default: unauthenticated `.json` listings returned HTTP 403; the adapter raises `SourceBlockedError` and the run continues without it.
+- Google News RSS disabled by default: news.google.com/robots.txt disallows `/rss/search` for generic agents and the operating rules require respecting robots.txt; adapter, templates and watchlist queries are fully implemented and tested against fixtures.
+- SEC EDGAR needs a User-Agent with a real contact email (a generic UA got 403), so the adapter sends `OppRadar <RADAR_CONTACT_EMAIL>` and skips itself when the email is unset.
+- SEC Form D filings from pooled vehicles (funds, LPs, SPVs) and `D/A` amendments are skipped: they are not hiring signals.
+- Fixtures are hand-written in the exact wire format of each source (verified against live responses) with fictional companies, so tests are deterministic and we never commit third-party article text.
+- Fixtures use relative time tokens (`{{iso:-3h}}`) so fixture-mode demos always look fresh.
+- Domain JSON (Signal, Candidate, UserProfile) uses snake_case keys to match the spec and the Claude-mode schema; TypeScript variables stay camelCase.

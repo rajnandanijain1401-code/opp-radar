@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Brightloop Labs announces new Austin hub",
+    "url": "https://example.com/news/brightloop-austin-hub",
+    "date": "{{iso:-4h}}"
+  },
+  { "title": "", "url": "not-a-url" }
+]

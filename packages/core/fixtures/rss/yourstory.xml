@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>YourStory</title>
+    <link>https://yourstory.com</link>
+    <description>YourStory feed</description>
+    <item>
+      <title><![CDATA[Bengaluru-based Kosha AI raises $3.5M seed round to build agentic accounting]]></title>
+      <link>https://yourstory.com/2026/11/kosha-ai-raises-seed-round-agentic-accounting</link>
+      <guid isPermaLink="false">https://yourstory.com/2026/11/kosha-ai-raises-seed-round-agentic-accounting</guid>
+      <pubDate>{{rfc822:-4h}}</pubDate>
+      <description><![CDATA[<p>Kosha AI, which automates bookkeeping for mid-sized companies, raised $3.5 million in a seed round led by Ember Capital.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Paylane launches UPI credit line product for small businesses]]></title>
+      <link>https://yourstory.com/2026/11/paylane-launches-upi-credit-line</link>
+      <guid isPermaLink="false">https://yourstory.com/2026/11/paylane-launches-upi-credit-line</guid>
+      <pubDate>{{rfc822:-9h}}</pubDate>
+      <description><![CDATA[<p>Paylane has launched a UPI-linked credit line for SMBs.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Meet the 12 startups in the latest Northstar Surge cohort]]></title>
+      <link>https://yourstory.com/2026/11/northstar-surge-cohort-12-startups</link>
+      <guid isPermaLink="false">https://yourstory.com/2026/11/northstar-surge-cohort-12-startups</guid>
+      <pubDate>{{rfc822:-14h}}</pubDate>
+      <description><![CDATA[<p>Northstar Surge has announced its latest accelerator cohort of 12 early-stage startups.</p>]]></description>
+    </item>
+  </channel>
+</rss>

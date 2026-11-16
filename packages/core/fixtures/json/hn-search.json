@@ -1,0 +1,28 @@
+{
+  "hits": [
+    {
+      "objectID": "50600001",
+      "title": "Launch HN: Driftwood (YC F26) - Observability for AI agents",
+      "url": "https://driftwood.dev",
+      "created_at": "{{iso:-4h}}",
+      "created_at_i": {{unix:-4h}},
+      "points": 132
+    },
+    {
+      "objectID": "50600002",
+      "title": "Fieldstack raises $45M Series C to bring AI copilots to construction sites",
+      "url": "https://techcrunch.com/2026/11/15/fieldstack-raises-45m-series-c/?utm_source=hackernews&ref=hn",
+      "created_at": "{{iso:-8h}}",
+      "created_at_i": {{unix:-8h}},
+      "points": 48
+    },
+    {
+      "objectID": "50600003",
+      "title": "Ask HN: What are you reading this month?",
+      "url": null,
+      "created_at": "{{iso:-5h}}",
+      "created_at_i": {{unix:-5h}},
+      "points": 12
+    }
+  ]
+}

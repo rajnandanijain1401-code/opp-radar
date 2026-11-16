@@ -1,0 +1,11 @@
+{
+  "data": [
+    {
+      "id": "1900000000000000001",
+      "text": "We are hiring! Driftwood is looking for founding engineers after our YC demo day https://t.co/abc",
+      "created_at": "{{iso:-3h}}",
+      "author_id": "42"
+    }
+  ],
+  "includes": { "users": [{ "id": "42", "username": "driftwood_dev" }] }
+}

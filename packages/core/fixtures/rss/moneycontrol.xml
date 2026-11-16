@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Moneycontrol Business</title>
+    <link>https://www.moneycontrol.com</link>
+    <description>Moneycontrol Business feed</description>
+    <item>
+      <title><![CDATA[Orbit Health to acquire Lumen Labs in Rs 250 crore deal]]></title>
+      <link>https://www.moneycontrol.com/news/business/startup/orbit-health-to-acquire-lumen-labs-1100006.html</link>
+      <guid isPermaLink="false">https://www.moneycontrol.com/news/business/startup/orbit-health-to-acquire-lumen-labs-1100006.html</guid>
+      <pubDate>{{rfc822:-4h}}</pubDate>
+      <description><![CDATA[<p>The deal values Lumen Labs at about Rs 250 crore.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Gold prices edge lower ahead of Fed commentary]]></title>
+      <link>https://www.moneycontrol.com/news/business/markets/gold-prices-edge-lower-1100007.html</link>
+      <guid isPermaLink="false">https://www.moneycontrol.com/news/business/markets/gold-prices-edge-lower-1100007.html</guid>
+      <pubDate>{{rfc822:-2h}}</pubDate>
+      <description><![CDATA[<p>Gold prices slipped.</p>]]></description>
+    </item>
+  </channel>
+</rss>

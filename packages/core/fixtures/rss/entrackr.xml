@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Entrackr</title>
+    <link>https://entrackr.com</link>
+    <description>Entrackr feed</description>
+    <item>
+      <title><![CDATA[Exclusive: Zeta Pay bags $20 Mn Series B from Northstar Ventures, Blue Peak]]></title>
+      <link>https://entrackr.com/2026/11/exclusive-zeta-pay-bags-20-mn-series-b/</link>
+      <guid isPermaLink="false">https://entrackr.com/2026/11/exclusive-zeta-pay-bags-20-mn-series-b/</guid>
+      <pubDate>{{rfc822:-2h}}</pubDate>
+      <description><![CDATA[<p>Zeta Pay has raised $20 million in Series B funding, according to regulatory filings accessed by Entrackr.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Quickbasket appoints former FoodDash executive Meera Rao as CTO]]></title>
+      <link>https://entrackr.com/2026/11/quickbasket-appoints-meera-rao-cto/</link>
+      <guid isPermaLink="false">https://entrackr.com/2026/11/quickbasket-appoints-meera-rao-cto/</guid>
+      <pubDate>{{rfc822:-7h}}</pubDate>
+      <description><![CDATA[<p>Quick commerce startup Quickbasket has appointed Meera Rao as its chief technology officer.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Farmlane in talks to raise $8 Mn in pre-Series A round]]></title>
+      <link>https://entrackr.com/2026/11/farmlane-in-talks-to-raise-8-mn/</link>
+      <guid isPermaLink="false">https://entrackr.com/2026/11/farmlane-in-talks-to-raise-8-mn/</guid>
+      <pubDate>{{rfc822:-12h}}</pubDate>
+      <description><![CDATA[<p>Agritech startup Farmlane is in advanced talks to raise around $8 million.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Weekly funding report: Indian startups raised $210 Mn this week]]></title>
+      <link>https://entrackr.com/2026/11/weekly-funding-report-210-mn/</link>
+      <guid isPermaLink="false">https://entrackr.com/2026/11/weekly-funding-report-210-mn/</guid>
+      <pubDate>{{rfc822:-20h}}</pubDate>
+      <description><![CDATA[<p>Indian startups raised around $210 million across 24 deals this week.</p>]]></description>
+    </item>
+  </channel>
+</rss>

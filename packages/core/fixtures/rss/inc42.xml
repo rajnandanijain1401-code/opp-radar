@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Inc42</title>
+    <link>https://inc42.com</link>
+    <description>Inc42 feed</description>
+    <item>
+      <title><![CDATA[Fintech Startup Zeta Pay Raises $20 Mn In Series B Led By Northstar Ventures]]></title>
+      <link>https://inc42.com/buzz/fintech-startup-zeta-pay-raises-20-mn-series-b/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feed</link>
+      <guid isPermaLink="false">https://inc42.com/buzz/fintech-startup-zeta-pay-raises-20-mn-series-b/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feed</guid>
+      <pubDate>{{rfc822:-3h}}</pubDate>
+      <description><![CDATA[<p>Bengaluru-based Zeta Pay, which builds lending infrastructure for small merchants, has raised $20 Mn in its Series B round led by Northstar Ventures, with participation from Blue Peak Capital.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Exclusive: Orbit Health Acquires AI Diagnostics Startup Lumen Labs]]></title>
+      <link>https://inc42.com/buzz/orbit-health-acquires-lumen-labs/</link>
+      <guid isPermaLink="false">https://inc42.com/buzz/orbit-health-acquires-lumen-labs/</guid>
+      <pubDate>{{rfc822:-5h}}</pubDate>
+      <description><![CDATA[<p>Healthtech unicorn Orbit Health has acquired Pune-based AI diagnostics startup Lumen Labs in a cash and stock deal.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Kirana Tech Startup ShelfWise Opens New Office In Hyderabad, To Hire 150]]></title>
+      <link>https://inc42.com/buzz/shelfwise-opens-hyderabad-office-hire-150/</link>
+      <guid isPermaLink="false">https://inc42.com/buzz/shelfwise-opens-hyderabad-office-hire-150/</guid>
+      <pubDate>{{rfc822:-8h}}</pubDate>
+      <description><![CDATA[<p>ShelfWise said the new office will house engineering and data science teams and that it plans to hire 150 people over the next year.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Edtech Startup Learnly Lays Off 120 Employees Amid Restructuring]]></title>
+      <link>https://inc42.com/buzz/edtech-learnly-layoffs-120/</link>
+      <guid isPermaLink="false">https://inc42.com/buzz/edtech-learnly-layoffs-120/</guid>
+      <pubDate>{{rfc822:-10h}}</pubDate>
+      <description><![CDATA[<p>Learnly has laid off around 120 employees across sales and content teams as it restructures to reach profitability.</p>]]></description>
+    </item>
+    <item>
+      <title><![CDATA[Govt Notifies Amendments To Consumer Protection Rules For Ecommerce]]></title>
+      <link>https://inc42.com/buzz/govt-consumer-protection-rules-ecommerce/</link>
+      <guid isPermaLink="false">https://inc42.com/buzz/govt-consumer-protection-rules-ecommerce/</guid>
+      <pubDate>{{rfc822:-6h}}</pubDate>
+      <description><![CDATA[<p>The amendments cover disclosure requirements for online marketplaces.</p>]]></description>
+    </item>
+  </channel>
+</rss>

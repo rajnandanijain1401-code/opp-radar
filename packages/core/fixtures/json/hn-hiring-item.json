@@ -1,0 +1,38 @@
+{
+  "id": 50500000,
+  "created_at": "{{iso:-15d}}",
+  "author": "whoishiring",
+  "text": "Please state the location and include REMOTE for remote work.",
+  "children": [
+    {
+      "id": 50500101,
+      "created_at": "{{iso:-3h}}",
+      "author": "zp_hiring",
+      "text": "Zeta Pay | Senior Backend Engineer, Product Designer | Bengaluru | ONSITE | Full-time<p>We build lending rails for small merchants. Apply at zetapay.example/careers</p>"
+    },
+    {
+      "id": 50500102,
+      "created_at": "{{iso:-5h}}",
+      "author": "driftwood",
+      "text": "Driftwood (YC F26) | Founding Engineer | Remote (US) | REMOTE<p>Observability for AI agents.</p>"
+    },
+    {
+      "id": 50500103,
+      "created_at": "{{iso:-9h}}",
+      "author": "helixbio",
+      "text": "Helix Bio | ML Engineer, Data Scientist | Boston, MA | Hybrid<p>Protein design with ML.</p>"
+    },
+    {
+      "id": 50500104,
+      "created_at": "{{iso:-20d}}",
+      "author": "oldpost",
+      "text": "Old Co | Engineer | Nowhere | ONSITE<p>Too old to include.</p>"
+    },
+    {
+      "id": 50500105,
+      "created_at": "{{iso:-2h}}",
+      "author": "random",
+      "text": "Is anyone else seeing fewer remote roles this month?"
+    }
+  ]
+}
