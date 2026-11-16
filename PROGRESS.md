@@ -2,7 +2,7 @@
 
 - [x] M0 Scaffold: monorepo, tooling, CI, license, env examples, decisions, Docker Compose
 - [x] M1 Core types + sources: Zod schemas, adapters, fixtures, `sources.yaml`
-- [ ] M2 Normalize + dedupe + cluster
+- [x] M2 Normalize + dedupe + cluster
 - [ ] M3 Classify: rules + LLM + cache + fallback, golden set eval
 - [ ] M4 Enrich + score + route
 - [ ] M5 Emails: React Email templates, SMTP + Resend providers, preview, test-email

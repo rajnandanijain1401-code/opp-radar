@@ -18,3 +18,7 @@ One line per decision: what was decided, and why.
 - Fixtures are hand-written in the exact wire format of each source (verified against live responses) with fictional companies, so tests are deterministic and we never commit third-party article text.
 - Fixtures use relative time tokens (`{{iso:-3h}}`) so fixture-mode demos always look fresh.
 - Domain JSON (Signal, Candidate, UserProfile) uses snake_case keys to match the spec and the Claude-mode schema; TypeScript variables stay camelCase.
+- `content_hash` = first 24 hex chars of sha256(canonical URL without scheme and `www.`), so the same article behind tracking params, AMP or a decodable Google News link hashes identically.
+- Near-duplicate detection uses Jaccard on normalized title unigrams + bigrams (threshold 0.8), with money/verb normalization (`Mn`/`million` to `m`, `bags`/`secures` to `raise`). Simpler and more explainable than simhash for headline-length text.
+- Dedupe keeps the earliest report and lists the others in `other_sources`; clustering (same normalized company + event type within 72h) runs after classification, persists clusters in state/DB so a story arriving a day later joins its original cluster.
+- New-style opaque Google News IDs cannot be decoded offline; we keep the Google URL and rely on title dedupe rather than calling Google per item.
