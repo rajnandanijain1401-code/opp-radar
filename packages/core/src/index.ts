@@ -19,3 +19,7 @@ export * from "./classify/prompt";
 export * from "./classify/llm";
 export * from "./classify/classify";
 export * from "./classify/eval";
+export * from "./enrich/jobboards";
+export * from "./score/score";
+export * from "./route/route";
+export * from "./pipeline/signals";

@@ -28,3 +28,10 @@ One line per decision: what was decided, and why.
 - The token budget is checked before each batch with a conservative estimate (about 4 chars per token plus ~260 output tokens per item), so we never start a call we cannot afford.
 - Currency conversion in the rules engine uses fixed rates (1 USD = 84 INR, EUR 1.08, GBP 1.27); good enough for thresholds, documented in the LLM prompt too.
 - Golden set: 30 hand-labeled fictional headlines across all 11 event types; rules mode scores 93% event-type accuracy (2 honest misses kept to avoid overfitting).
+- Exclude keywords force the final score (not only relevance) to 0, so an excluded item can never reach a digest through hiring likelihood alone.
+- Relevance treats an empty profile dimension as neutral (0.6, keywords 0.5) instead of a miss, so new users with sparse profiles still get useful digests; dimension weights: roles 35, sectors 25, geos 20, keywords 20.
+- Recency decays exponentially with a 24h half-life; scoring weights and thresholds live in `DEFAULT_SCORING` and can be overridden from `radar.config.yaml`.
+- Routing keeps only the best-scoring signal per cluster per user and skips clusters already delivered, which is how "never send the same cluster twice" is enforced on every channel.
+- Instant overflow beyond the daily cap goes to the digest rather than being dropped.
+- Weekly digests go out on Monday at the user's chosen local hour; timezones use `Intl.DateTimeFormat`, no date library.
+- Job-board enrichment tries up to 4 slug guesses x 3 boards (Greenhouse, Lever, Ashby), caches per normalized company for 24h (including misses) and swallows all errors.

@@ -1,23 +1,100 @@
 [
-  { "match": "/robots.txt", "body": "User-agent: *\nAllow: /\n" },
-  { "match": "inc42.com/feed", "file": "rss/inc42.xml" },
-  { "match": "entrackr.com/rss", "file": "rss/entrackr.xml" },
-  { "match": "yourstory.com/feed", "file": "rss/yourstory.xml" },
-  { "match": "tech/rssfeeds/13357270", "file": "rss/et-tech.xml" },
-  { "match": "startups/rssfeeds/78570550", "file": "rss/et-startups.xml" },
-  { "match": "moneycontrol.com/rss/business", "file": "rss/moneycontrol.xml" },
-  { "match": "techcrunch.com/category/venture/feed", "file": "rss/techcrunch-venture.xml" },
-  { "match": "techcrunch.com/category/startups/feed", "file": "rss/techcrunch-startups.xml" },
-  { "match": "news.crunchbase.com/feed", "file": "rss/crunchbase-news.xml" },
-  { "match": "news.google.com/rss/search", "file": "rss/google-news.xml" },
-  { "match": "author_whoishiring", "file": "json/hn-hiring-search.json" },
-  { "match": "hn.algolia.com/api/v1/items/", "file": "json/hn-hiring-item.json" },
-  { "match": "hn.algolia.com/api/v1/search_by_date", "file": "json/hn-search.json" },
-  { "match": "reddit.com/r/", "file": "json/reddit-startups.json" },
-  { "match": "sec.gov/cgi-bin/browse-edgar", "file": "rss/sec-form-d.xml" },
-  { "match": "api.producthunt.com", "file": "json/producthunt.json" },
-  { "match": "api.x.com/2/tweets/search", "file": "json/x.json" },
-  { "match": "api.apify.com", "file": "json/apify.json" },
-  { "match": "vccircle.com", "status": 404, "body": "" },
-  { "match": "business-standard.com", "status": 403, "body": "Access Denied" }
+  {
+    "match": "/robots.txt",
+    "body": "User-agent: *\nAllow: /\n"
+  },
+  {
+    "match": "boards-api.greenhouse.io/v1/boards/zetapay/jobs",
+    "file": "json/greenhouse-zetapay.json"
+  },
+  {
+    "match": "api.lever.co/v0/postings/vaultline",
+    "file": "json/lever-vaultline.json"
+  },
+  {
+    "match": "api.ashbyhq.com/posting-api/job-board/fieldstack",
+    "file": "json/ashby-fieldstack.json"
+  },
+  {
+    "match": "inc42.com/feed",
+    "file": "rss/inc42.xml"
+  },
+  {
+    "match": "entrackr.com/rss",
+    "file": "rss/entrackr.xml"
+  },
+  {
+    "match": "yourstory.com/feed",
+    "file": "rss/yourstory.xml"
+  },
+  {
+    "match": "tech/rssfeeds/13357270",
+    "file": "rss/et-tech.xml"
+  },
+  {
+    "match": "startups/rssfeeds/78570550",
+    "file": "rss/et-startups.xml"
+  },
+  {
+    "match": "moneycontrol.com/rss/business",
+    "file": "rss/moneycontrol.xml"
+  },
+  {
+    "match": "techcrunch.com/category/venture/feed",
+    "file": "rss/techcrunch-venture.xml"
+  },
+  {
+    "match": "techcrunch.com/category/startups/feed",
+    "file": "rss/techcrunch-startups.xml"
+  },
+  {
+    "match": "news.crunchbase.com/feed",
+    "file": "rss/crunchbase-news.xml"
+  },
+  {
+    "match": "news.google.com/rss/search",
+    "file": "rss/google-news.xml"
+  },
+  {
+    "match": "author_whoishiring",
+    "file": "json/hn-hiring-search.json"
+  },
+  {
+    "match": "hn.algolia.com/api/v1/items/",
+    "file": "json/hn-hiring-item.json"
+  },
+  {
+    "match": "hn.algolia.com/api/v1/search_by_date",
+    "file": "json/hn-search.json"
+  },
+  {
+    "match": "reddit.com/r/",
+    "file": "json/reddit-startups.json"
+  },
+  {
+    "match": "sec.gov/cgi-bin/browse-edgar",
+    "file": "rss/sec-form-d.xml"
+  },
+  {
+    "match": "api.producthunt.com",
+    "file": "json/producthunt.json"
+  },
+  {
+    "match": "api.x.com/2/tweets/search",
+    "file": "json/x.json"
+  },
+  {
+    "match": "api.apify.com",
+    "file": "json/apify.json"
+  },
+  {
+    "match": "vccircle.com",
+    "status": 404,
+    "body": ""
+  },
+  {
+    "match": "business-standard.com",
+    "status": 403,
+    "body": "Access Denied"
+  }
 ]

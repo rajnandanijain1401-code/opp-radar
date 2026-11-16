@@ -1,0 +1,9 @@
+{ "apiVersion": "1", "jobs": [
+  { "title": "Senior ML Engineer", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/1" },
+  { "title": "Founding Account Executive, India", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/2" },
+  { "title": "Product Designer", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/3" },
+  { "title": "Customer Success Manager", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/4" },
+  { "title": "Backend Engineer, Integrations", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/5" },
+  { "title": "Head of Data", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/6" },
+  { "title": "Implementation Manager", "jobUrl": "https://jobs.ashbyhq.com/fieldstack/7" }
+] }

@@ -4,7 +4,7 @@
 - [x] M1 Core types + sources: Zod schemas, adapters, fixtures, `sources.yaml`
 - [x] M2 Normalize + dedupe + cluster
 - [x] M3 Classify: rules + LLM + cache + fallback, golden set eval
-- [ ] M4 Enrich + score + route
+- [x] M4 Enrich + score + route
 - [ ] M5 Emails: React Email templates, SMTP + Resend providers, preview, test-email
 - [ ] M6 CLI + OSS GitHub Action mode
 - [ ] M7 Claude mode: skill, slash command, docs
