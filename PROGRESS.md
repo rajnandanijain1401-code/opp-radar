@@ -5,7 +5,7 @@
 - [x] M2 Normalize + dedupe + cluster
 - [x] M3 Classify: rules + LLM + cache + fallback, golden set eval
 - [x] M4 Enrich + score + route
-- [ ] M5 Emails: React Email templates, SMTP + Resend providers, preview, test-email
+- [x] M5 Emails: React Email templates, SMTP + Resend providers, preview, test-email
 - [ ] M6 CLI + OSS GitHub Action mode
 - [ ] M7 Claude mode: skill, slash command, docs
 - [ ] M8 Web app: DB, auth, onboarding, dashboard, public pages, cron, admin

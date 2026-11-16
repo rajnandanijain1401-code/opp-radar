@@ -35,3 +35,9 @@ One line per decision: what was decided, and why.
 - Instant overflow beyond the daily cap goes to the digest rather than being dropped.
 - Weekly digests go out on Monday at the user's chosen local hour; timezones use `Intl.DateTimeFormat`, no date library.
 - Job-board enrichment tries up to 4 slug guesses x 3 boards (Greenhouse, Lever, Ashby), caches per normalized company for 24h (including misses) and swallows all errors.
+- React Email templates live in `packages/emails`; `packages/core` builds framework-free email view models (subjects, event lines, "why it matters", links) so the CLI and the web app render identical emails.
+- OSS mode has no web server, so unsubscribe uses a `mailto:` List-Unsubscribe (no one-click POST) and feedback links are omitted; hosted mode uses HMAC-signed https links and RFC 8058 one-click headers.
+- `ConsoleProvider` prints the plain-text email and writes `.html` + `.txt` to `out/emails/`, which is the default when no SMTP or Resend credentials are set.
+- Fixture mode (`RADAR_FIXTURES=1` or `--fixtures`) always sends the digest too (demo), and keeps its state in `out/state.fixtures.json` so demos never touch the committed `data/state.json`.
+- When a digest is due but nothing matched, no "quiet day" email is sent (less inbox noise); the template still supports it.
+- A root `tsconfig.json` includes the packages so `tsx` applies the automatic JSX runtime when the CLI imports the React Email templates.

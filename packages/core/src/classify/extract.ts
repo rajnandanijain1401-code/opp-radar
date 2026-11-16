@@ -150,6 +150,8 @@ const EVENT_VERBS =
 
 /** Pull the company name out of a headline. Returns "Unknown" when nothing plausible is found. */
 export function extractCompany(title: string): string {
+  const hn = title.match(/^(?:launch|show)\s+hn:\s*([^(:\-\u2013]+)/i);
+  if (hn?.[1]?.trim()) return hn[1].trim();
   let t = title.replace(LEADING_NOISE, "").trim();
   const m = t.match(EVENT_VERBS);
   let head = m && m.index !== undefined && m.index > 0 ? t.slice(0, m.index) : "";
@@ -177,6 +179,13 @@ export function extractCompany(title: string): string {
     .trim();
   if (!name || name.length > 60) return "Unknown";
   return name;
+}
+
+/** "Vaultline, Inc." -> "Vaultline" for display (cluster keys already ignore suffixes). */
+export function displayCompany(name: string): string {
+  return (
+    name.replace(/,?\s+(inc|llc|ltd|corp|corporation|co|plc|pvt\.? ltd)\.?$/i, "").trim() || name
+  );
 }
 
 export function parseHireCount(text: string): number | null {

@@ -22,8 +22,8 @@ describe("sec form d adapter", () => {
 
   it("keeps operating companies, skips funds and amendments", async () => {
     const items = await createSecFormDAdapter(def, fixtureCtx()).fetch(DAY_AGO);
-    expect(items.map((i) => i.extra?.company)).toEqual(["Vaultline, Inc.", "Brightloop Labs Inc."]);
-    expect(items[0]!.title).toBe("Vaultline, Inc. files Form D for a private funding round");
+    expect(items.map((i) => i.extra?.company)).toEqual(["Vaultline", "Brightloop Labs"]);
+    expect(items[0]!.title).toBe("Vaultline files Form D for a private funding round");
   });
 
   it("skips without a contact email (EDGAR requires one)", async () => {

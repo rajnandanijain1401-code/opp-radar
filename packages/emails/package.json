@@ -4,14 +4,27 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./render": "./src/render.tsx",
+    "./providers": "./src/providers/index.ts"
   },
   "scripts": {
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run"
   },
   "dependencies": {
-    "@opp-radar/core": "workspace:*"
+    "@opp-radar/core": "workspace:*",
+    "@react-email/components": "^1.0.12",
+    "@react-email/render": "^2.3.1",
+    "nodemailer": "^7.0.13",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "resend": "^6.38.1"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^7.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0"
   }
 }

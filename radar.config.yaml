@@ -1,0 +1,70 @@
+# ------------------------------------------------------------------
+# OppRadar config (OSS mode). Fork the repo, edit this file, add secrets.
+# Secrets (API keys, SMTP password) NEVER go here: use GitHub Actions secrets.
+# ------------------------------------------------------------------
+
+# llm  = classify with Claude when ANTHROPIC_API_KEY is set (falls back to rules automatically)
+# rules = free keyword/regex classifier, never calls an API
+mode: llm
+
+# Who gets the emails. Usually just you.
+recipients:
+  - you@example.com
+
+# Optional. RADAR_FROM_EMAIL (secret/env) wins over this.
+# from: "OppRadar <you@gmail.com>"
+
+profile:
+  # Role families you want to hear about:
+  # engineering, product, design, data, sales, marketing, ops, finance, hr, customer_success, leadership
+  roles: [engineering, product]
+  seniority: senior # free text, used for context only
+  # Sector tags (lowercase), e.g. fintech, ai, saas, healthtech, devtools, commerce, climate, edtech
+  sectors: [fintech, ai, saas, devtools]
+  # Countries or cities. "Remote" matches anything remote-friendly.
+  geographies: [India, Bengaluru, United States]
+  # Bonus points when an item mentions any of these
+  include_keywords: [payments, developer]
+  # Items mentioning any of these are dropped entirely
+  exclude_keywords: [crypto, gambling]
+  # Companies you care about. A watchlist hit forces relevance to 100.
+  watchlist_companies: [Zeta Pay, Fieldstack]
+  # Leave empty for all event types. Options: funding, acquisition, expansion, leadership_hire,
+  # product_launch, partnership_contract, ipo_filing, hiring_announcement, layoffs, accelerator_batch, other
+  event_types: []
+  # Ignore funding rounds smaller than this (USD). null = no minimum.
+  min_amount_usd: null
+
+  # Instant alerts: items scoring at or above the threshold, batched (max one email per 15 min)
+  instant_alerts_enabled: true
+  instant_threshold: 75
+  max_instant_per_day: 5
+
+  # Digest: daily | weekly | off, sent at this local hour (0-23)
+  digest_frequency: daily
+  digest_hour_local: 8
+  timezone: Asia/Kolkata
+
+# Max items in a digest
+digest_max_items: 15
+
+# Sources: see sources.yaml for the full list and notes.
+sources:
+  file: sources.yaml
+  enable: [] # turn on sources that ship disabled, e.g. [producthunt]
+  disable: [] # turn off sources, e.g. [moneycontrol]
+
+# Scoring (optional). final = 0.45*hiring + 0.35*relevance + 0.10*recency + 0.10*source_quality
+scoring:
+  weights: { hiring: 0.45, relevance: 0.35, recency: 0.1, source_quality: 0.1 }
+  recency_half_life_hours: 24
+  digest_min_score: 40
+
+# LLM settings (optional). RADAR_MODEL and LLM_DAILY_TOKEN_BUDGET env vars win.
+llm:
+  model: claude-haiku-5-5
+  daily_token_budget: 400000
+
+# Where the GitHub Action keeps seen hashes and counters (committed back with [skip ci])
+state_file: data/state.json
+first_run_lookback_hours: 24

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@opp-radar/core": "workspace:*",
+    "@opp-radar/emails": "workspace:^",
     "commander": "^13.1.0"
   }
 }

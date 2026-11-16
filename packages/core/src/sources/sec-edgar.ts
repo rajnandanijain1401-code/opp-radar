@@ -1,4 +1,5 @@
 import { parseFeed } from "../util/feed";
+import { displayCompany } from "../classify/extract";
 import type { RawItem } from "../schemas";
 import {
   SourceBlockedError,
@@ -53,14 +54,15 @@ export function createSecFormDAdapter(
         const parsed = parseFormDTitle(e.title);
         if (!parsed || parsed.form !== "D") continue; // skip amendments
         if (FUND_PATTERN.test(parsed.company)) continue;
+        const company = displayCompany(parsed.company);
         items.push({
           source_id: def.id,
           source_name: def.name,
-          title: `${parsed.company} files Form D for a private funding round`,
+          title: `${company} files Form D for a private funding round`,
           url: e.link,
           published_at: e.published_at,
           guid: e.guid,
-          extra: { company: parsed.company, cik: parsed.cik, form: parsed.form },
+          extra: { company, legal_name: parsed.company, cik: parsed.cik, form: parsed.form },
         });
       }
       return items;

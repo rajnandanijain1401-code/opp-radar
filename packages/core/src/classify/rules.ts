@@ -205,6 +205,25 @@ interface Copy {
   opener: string;
 }
 
+const SECTOR_LABEL: Record<string, string> = {
+  ai: "AI",
+  saas: "B2B software",
+  devtools: "developer tools",
+  fintech: "fintech",
+  healthtech: "healthtech",
+  biotech: "biotech",
+  edtech: "edtech",
+  cybersecurity: "cybersecurity",
+  commerce: "commerce",
+  mobility: "mobility",
+  climate: "climate tech",
+  agritech: "agritech",
+  proptech: "construction and real estate",
+  design: "design software",
+  gaming: "gaming",
+};
+export const sectorLabel = (s: string) => SECTOR_LABEL[s] ?? s;
+
 function copyFor(
   type: EventType,
   company: string,
@@ -217,7 +236,7 @@ function copyFor(
     title: string;
   },
 ): Copy {
-  const sector = ctx.sectors[0] ? `${ctx.sectors[0]} ` : "";
+  const sector = ctx.sectors[0] ? `${sectorLabel(ctx.sectors[0])} ` : "";
   const role = ROLE_LABEL[ctx.roles[0] ?? "engineering"];
   const amt = ctx.amount ? fmtUsd(ctx.amount) : null;
   const round = ctx.round ? `${ctx.round} ` : "";
@@ -231,7 +250,7 @@ function copyFor(
           ? `${who} filed a Form D with the SEC, which signals a private funding round that may not be public yet.`
           : `${who} raised ${amt ?? "new funding"}${ctx.round ? ` in a ${ctx.round} round` : ""}${ctx.investors[0] ? ` led by ${ctx.investors[0]}` : ""}.`;
       return {
-        summary: `${raised}${ctx.sectors[0] ? ` It operates in ${ctx.sectors[0]}.` : ""}`,
+        summary: `${raised}${ctx.sectors[0] ? ` It works in ${sectorLabel(ctx.sectors[0])}.` : ""}`,
         reason: `Fresh ${round}capital is usually spent on ${role} and go-to-market hires within the next 3 to 6 months.`,
         action: `Check ${who}'s careers page and reach out to the ${role} lead this week, before new roles are posted publicly.`,
         opener: `Congrats on the ${round}raise, ${known ? `${company} team` : "team"}! I'd love to help you scale ${role} as you put the new capital to work.`,

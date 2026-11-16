@@ -34,6 +34,9 @@ describe("extractors", () => {
     expect(extractCompany("Bengaluru-based Kosha AI raises $3.5M seed")).toBe("Kosha AI");
     expect(extractCompany("Cloud services firm Indus Cloud files DRHP")).toBe("Indus Cloud");
     expect(extractCompany("Exclusive: Orbit Health acquires Lumen Labs")).toBe("Orbit Health");
+    expect(extractCompany("Launch HN: Driftwood (YC F26) - Observability for AI agents")).toBe(
+      "Driftwood",
+    );
   });
 });
 

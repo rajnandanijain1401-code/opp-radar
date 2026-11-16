@@ -1,0 +1,139 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`digest emails > puts the top pick first and groups the rest by event type 1`] = `
+"● OPPRADAR
+
+Your daily radar
+
+Monday, Nov 16 | 3 signals matched
+
+Top pick of the day
+
+Funding | score 88
+
+Zeta Pay raised $20M Series B
+
+Funding | $20M | Series B | with Northstar Ventures | India, Bengaluru
+
+Zeta Pay closed a $20M Series B led by Northstar Ventures. It plans to grow its lending product for small merchants.
+
+Why it matters for you
+
+Likely hiring for engineering. In fintech. New Series B money usually funds engineering and sales hiring in the next two quarters.
+
+Open roles (12)
+
+Senior Backend Engineer, Lending · Product Designer · Engineering Manager, Payments See all https://boards.greenhouse.io/zetapay
+
+Suggested action
+
+Check Zeta Pay's careers page and reach out to the engineering lead this week.
+
+Opener you can send
+
+Congrats on the Series B, Zeta Pay team! I'd love to help you scale engineering.
+
+Source: Inc42 https://inc42.com/buzz/zeta-pay (+1 more) | Useful? 👍 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ196ZXRhIn0.MX1is8wcg7v2S8DJ5i3TJdT-w_4c_CwzKOjDL0ett_A&r=up 👎 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ196ZXRhIn0.MX1is8wcg7v2S8DJ5i3TJdT-w_4c_CwzKOjDL0ett_A&r=down
+
+Acquisition (1)
+
+Acquisition | score 77
+
+Orbit Health announced an acquisition
+
+Acquisition | $30M | India, Bengaluru
+
+Orbit Health bought AI diagnostics startup Lumen Labs. The deal adds an imaging team to Orbit.
+
+Suggested action
+
+Check Zeta Pay's careers page and reach out to the engineering lead this week.
+
+Source: Inc42 https://inc42.com/buzz/zeta-pay (+1 more) | Useful? 👍 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ19vcmJpdCJ9.acbxLUL0mZ8EJAXyRbev2CrY5W6ISohI8kpe55TVwm8&r=up 👎 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ19vcmJpdCJ9.acbxLUL0mZ8EJAXyRbev2CrY5W6ISohI8kpe55TVwm8&r=down
+
+Expansion (1)
+
+Expansion | score 71
+
+ShelfWise is expanding
+
+Expansion | India, Bengaluru
+
+ShelfWise is opening a Hyderabad office and plans to hire about 150 people.
+
+Suggested action
+
+Check Zeta Pay's careers page and reach out to the engineering lead this week.
+
+Source: Inc42 https://inc42.com/buzz/zeta-pay (+1 more) | Useful? 👍 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ19zaGlwIn0.umTtpMvZXlAWidt9ESsTmy8BnF4PZjKPv-nBRLmI8Y8&r=up 👎 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ19zaGlwIn0.umTtpMvZXlAWidt9ESsTmy8BnF4PZjKPv-nBRLmI8Y8&r=down
+
+----------------------------------------
+
+You are getting this because you set up an OppRadar profile. Alerts are matched to the roles, sectors and companies you chose.
+
+Manage preferences https://oppradar.example/dashboard?tab=delivery | Unsubscribe in one click https://oppradar.example/unsubscribe?token=eyJ1IjoidXNlcl8xIiwiYSI6InVuc3ViIn0.GOU3no4eF-e9lkXaB4W7MEbPwoPy1jJiWT7WaQdr2cc
+
+OppRadar, 123 Example Street, Bengaluru"
+`;
+
+exports[`instant alert email > matches the snapshot 1`] = `
+"● OPPRADAR
+
+2 new high-signal opportunities just matched your profile.
+
+Funding | score 88
+
+Zeta Pay raised $20M Series B
+
+Funding | $20M | Series B | with Northstar Ventures | India, Bengaluru
+
+Zeta Pay closed a $20M Series B led by Northstar Ventures. It plans to grow its lending product for small merchants.
+
+Why it matters for you
+
+Likely hiring for engineering. In fintech. New Series B money usually funds engineering and sales hiring in the next two quarters.
+
+Open roles (12)
+
+Senior Backend Engineer, Lending · Product Designer · Engineering Manager, Payments See all https://boards.greenhouse.io/zetapay
+
+Suggested action
+
+Check Zeta Pay's careers page and reach out to the engineering lead this week.
+
+Opener you can send
+
+Congrats on the Series B, Zeta Pay team! I'd love to help you scale engineering.
+
+Source: Inc42 https://inc42.com/buzz/zeta-pay (+1 more) | Useful? 👍 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ196ZXRhIn0.MX1is8wcg7v2S8DJ5i3TJdT-w_4c_CwzKOjDL0ett_A&r=up 👎 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ196ZXRhIn0.MX1is8wcg7v2S8DJ5i3TJdT-w_4c_CwzKOjDL0ett_A&r=down
+
+Acquisition | score 77
+
+Orbit Health announced an acquisition
+
+Acquisition | $30M | India, Bengaluru
+
+Orbit Health bought AI diagnostics startup Lumen Labs. The deal adds an imaging team to Orbit.
+
+Why it matters for you
+
+Likely hiring for engineering. In fintech. New Series B money usually funds engineering and sales hiring in the next two quarters.
+
+Suggested action
+
+Check Zeta Pay's careers page and reach out to the engineering lead this week.
+
+Opener you can send
+
+Congrats on the Series B, Zeta Pay team! I'd love to help you scale engineering.
+
+Source: Inc42 https://inc42.com/buzz/zeta-pay (+1 more) | Useful? 👍 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ19vcmJpdCJ9.acbxLUL0mZ8EJAXyRbev2CrY5W6ISohI8kpe55TVwm8&r=up 👎 https://oppradar.example/api/email/feedback?token=eyJ1IjoidXNlcl8xIiwiYSI6ImZiIiwicyI6InNpZ19vcmJpdCJ9.acbxLUL0mZ8EJAXyRbev2CrY5W6ISohI8kpe55TVwm8&r=down
+
+----------------------------------------
+
+You are getting this because you set up an OppRadar profile. Alerts are matched to the roles, sectors and companies you chose.
+
+Manage preferences https://oppradar.example/dashboard?tab=delivery | Unsubscribe in one click https://oppradar.example/unsubscribe?token=eyJ1IjoidXNlcl8xIiwiYSI6InVuc3ViIn0.GOU3no4eF-e9lkXaB4W7MEbPwoPy1jJiWT7WaQdr2cc
+
+OppRadar, 123 Example Street, Bengaluru"
+`;
